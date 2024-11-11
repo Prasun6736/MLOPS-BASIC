@@ -16,3 +16,12 @@ dvc init
 
 dvc add dataset/winequality.csv
 
+git add .
+
+git commit -m "xyz"
+
+git remote add origin https://github.com/Prasun6736/MLOPS-BASIC.git
+
+git branch -M main
+
+git push origin main
