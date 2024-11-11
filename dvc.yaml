@@ -1,6 +1,6 @@
 stages:
   load_data:
-    cmd: python src/data.py --config=params.yaml
+    cmd: python src/load.py --config=params.yaml
     deps:
     - src/data.py
     - src/load.py
