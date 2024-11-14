@@ -13,8 +13,8 @@ stages:
       size: 633
     - path: src/load.py
       hash: md5
-      md5: 05bdf718ab296161cc572f1a112f0ff8
-      size: 925
+      md5: ce2ea47f5c6cf867f048749e9c8c5cec
+      size: 589
     outs:
     - path: data/raw/winequality.csv
       hash: md5
@@ -53,9 +53,22 @@ stages:
       size: 74913
     - path: src/train.py
       hash: md5
-      md5: c923c24a5dc5556ab8760ec5db31e778
-      size: 2031
+      md5: c778fbe010e8af9b74d66572f70d123c
+      size: 2497
     params:
       params.yaml:
         estimators.ElasticNet.params.alpha: 0.88
         estimators.ElasticNet.params.l1_ratio: 0.89
+    outs:
+    - path: model/model.joblib
+      hash: md5
+      md5: f0219491b1b5507222781c869acae403
+      size: 1279
+    - path: report/params.json
+      hash: md5
+      md5: 755b8fd0b91a91aa84d16d6699480af6
+      size: 46
+    - path: report/result.json
+      hash: md5
+      md5: 817cef279a79e424cdff9c3aeaa68d6e
+      size: 100
