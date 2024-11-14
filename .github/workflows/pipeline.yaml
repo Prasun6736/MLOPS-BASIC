@@ -36,12 +36,4 @@ jobs:
         pytest -v
 
 
-    - name: Deploy to Render
-      env:
-        RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
-      if: github.ref == 'refs/heads/main' && job.status == 'success'
-      run: |
-        curl -X POST "https://api.render.com/v1/services/srv-csqvqalumphs73d9ok6g/deploy" \
-          -H "Authorization: Bearer $RENDER_API_KEY" \
-          -H "Content-Type: application/json" \
-          -d '{"branch":"main"}'
+    
